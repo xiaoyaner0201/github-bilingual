@@ -3,7 +3,7 @@ import { chromium } from "playwright-core";
 import { mkdtempSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
-const ext = resolve("extension");
+const ext = resolve(process.env.EXT || "extension"); // EXT=path to test an unzipped release
 const exe = process.env.CHROMIUM_PATH;
 // Usage: node tests/e2e-extension.mjs [url] [zh|en]  (second arg = language the fold is in)
 const url = process.argv[2] || "https://github.com/cheaper-inference/OmniRoute/pull/17307";
