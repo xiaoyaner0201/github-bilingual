@@ -85,6 +85,11 @@ class Nesting(unittest.TestCase):
         body = GOOD.replace("中文。", "中文。\n\n```\nCloses #1\n```")
         self.assertEqual(bb.check(body), [])
 
+    def test_details_in_inline_code_ignored(self):
+        body = "Use `<details><summary>中文说明</summary>` as the fold.\n\n" + GOOD
+        self.assertEqual(bb.check(body), [])
+        self.assertEqual(bb.check("Use `<details>` here only."), bb.check("plain"))
+
     def test_crlf(self):
         self.assertEqual(bb.check(GOOD.replace("\n", "\r\n").replace("\r\n", "\n")), [])
 

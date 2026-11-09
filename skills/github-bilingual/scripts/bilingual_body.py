@@ -25,6 +25,7 @@ CLOSING = re.compile(r"^\s*(?:[-*]\s*)?(?:close[sd]?|fix(?:e[sd])?|resolve[sd]?|
 
 TAG = re.compile(r"<(/?)details\b[^>]*>", re.I)
 SUMMARY = re.compile(r"\A[ \t]*\n?[ \t]*<summary>([^<]*)</summary>", re.I)
+INLINE_CODE = re.compile(r"(`+)(?!`)[^\n]*?(?<!`)\1(?!`)")
 FENCE_LINE = re.compile(r"^[ \t]{0,3}(```|~~~)")
 
 
@@ -62,6 +63,9 @@ def _fence_mask(body):
         pos += len(line)
     if open_at is not None:
         ranges.append((open_at, len(body)))
+    # inline code spans: `...` or ``...`` on one line
+    for m in INLINE_CODE.finditer(body):
+        ranges.append((m.start(), m.end()))
     return ranges
 
 
