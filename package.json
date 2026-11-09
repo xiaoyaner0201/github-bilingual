@@ -1,0 +1,17 @@
+{
+  "name": "github-bilingual",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Write GitHub issues and PRs once in two languages; readers see their own language first.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/ && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:e2e": "node tests/e2e-extension.mjs",
+    "package": "node scripts/build.mjs && cd extension && zip -qr ../dist/github-bilingual-extension.zip . -x '.*'"
+  },
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "playwright-core": "^1.65.0"
+  }
+}

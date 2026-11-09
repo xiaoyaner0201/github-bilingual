@@ -1,0 +1,10 @@
+{
+  "name": "github-bilingual",
+  "description": "Write GitHub issues and PRs in English + Chinese with a fixed fold marker, so readers can see their own language first.",
+  "version": "0.1.0",
+  "author": {
+    "name": "xiaoyaner0201"
+  },
+  "homepage": "https://github.com/xiaoyaner0201/github-bilingual",
+  "license": "MIT"
+}

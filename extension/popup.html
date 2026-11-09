@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font: 13px -apple-system, "Segoe UI", sans-serif; margin: 12px; min-width: 220px; }
+  h1 { font-size: 14px; margin: 0 0 8px; }
+  label { display: block; margin: 6px 0; cursor: pointer; }
+  p { color: #59636e; margin: 10px 0 0; font-size: 12px; }
+</style>
+</head>
+<body>
+  <h1>GitHub Bilingual</h1>
+  <label><input type="radio" name="lang" value="auto"> <span data-i18n="auto">Follow browser language</span></label>
+  <label><input type="radio" name="lang" value="zh"> 中文</label>
+  <label><input type="radio" name="lang" value="en"> English</label>
+  <p data-i18n="hint">Applies to bodies with a 中文说明 / English fold.</p>
+  <script src="popup.js"></script>
+</body>
+</html>

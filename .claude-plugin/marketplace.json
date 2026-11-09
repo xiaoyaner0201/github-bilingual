@@ -1,0 +1,11 @@
+{
+  "name": "github-bilingual",
+  "owner": { "name": "xiaoyaner0201" },
+  "plugins": [
+    {
+      "name": "github-bilingual",
+      "source": "./",
+      "description": "Bilingual GitHub issue/PR writing skill (English + Chinese)."
+    }
+  ]
+}
