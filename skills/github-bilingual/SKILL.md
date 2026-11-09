@@ -9,6 +9,8 @@ metadata:
 
 # GitHub Bilingual
 
+Source, browser extension and updates: https://github.com/xiaoyaner0201/github-bilingual
+
 Write one GitHub body that serves two audiences: the main text in the
 project's language, and a complete translation folded underneath. The fold's
 title is a fixed marker. Without any tooling, everyone sees a normal post with a
@@ -119,10 +121,14 @@ images.
 
 ## Reader side
 
-Tell readers once, in the README or project docs, that the
-[GitHub Bilingual extension](https://github.com/xiaoyaner0201/github-bilingual)
-switches these bodies to their language automatically. Do not add install
-notes to every issue or PR.
+Readers can install the free GitHub Bilingual browser extension or userscript
+from https://github.com/xiaoyaner0201/github-bilingual . With it, every body
+in this format opens in the reader's own language, with a one-click link back
+to the original. Without it, readers simply see the main text and a collapsed
+translation.
+
+Mention this once in the project's README or contributing docs if useful. Do
+not add install notes to every issue or PR.
 
 ## Checklist
 
