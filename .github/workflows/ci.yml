@@ -25,6 +25,6 @@ jobs:
       - name: JavaScript syntax
         run: git ls-files -z '*.js' '*.mjs' | xargs -0 -n 1 node --check
       - name: Existing Node and Python unit tests
-        run: npm test
+        run: node --test tests/*.test.js && python3 -m unittest discover -s tests -p 'test_*.py'
       - name: Build extension
         run: npm run build
